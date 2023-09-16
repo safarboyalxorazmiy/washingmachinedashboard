@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="darker"></div>
+        <video src="./Ocean_4K_Our_Planet___Wildlife_and_Beautiful_Relaxing_Music_by_Relaxation.mp4" autoplay muted></video>
+
+        <h1 id="hour-display">00:00:00</h1>
+
+        <div class="main">
+            <div class="plan">
+                <h1>Plan:</h1>
+                <h1 class="count">00</h1>
+            </div>
+            <div class="ready">
+                <h1>Ready:</h1>
+                <h1 class="count">00</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateHour() {
+            const currentDate = new Date();
+            const currentHour = currentDate.getHours();
+            const currentMinute = currentDate.getMinutes();
+            const currentSecond = currentDate.getSeconds();
+
+            const hourDisplay = document.getElementById('hour-display');
+            hourDisplay.textContent = `${currentHour}:${currentMinute}:${currentSecond}`;
+        }
+
+        // Update the hour display every second
+        setInterval(updateHour, 1000);
+
+        // Initial update
+        updateHour();
+    </script>
+</body>
+</html>

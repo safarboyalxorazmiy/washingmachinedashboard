@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url('../fonts/digital-7/digital-7.mono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Digital-7';
+
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    video {
+        height: 99.9vh;
+        width: 100vw;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+        
+    }
+
+    .darker {
+        height: 99.9vh;
+        width: 100vw;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.588);
+        z-index: 2;
+    }
+
+    * {
+        position: relative;
+        z-index: 3;
+    }
+
+    #hour-display {
+        color: white;
+        margin-bottom: 50px;
+        font-size: 58px;
+    }
+
+    .main {
+        color: white;
+        display: flex;
+        gap: 150px;
+
+        .count {
+            margin-top: 10px;
+            font-size: 88px;
+        }
+    }
+}
